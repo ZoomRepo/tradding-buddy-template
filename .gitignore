@@ -1,0 +1,12 @@
+.vscode/settings.json
+*.pyc
+ebay_scanner/__pycache__/*
+.terraform/providers/registry.terraform.io/hashicorp/aws/3.67.0/windows_amd64/terraform-provider-aws_v3.67.0_x5.exe
+ebay_scanner/__pycache__/item.cpython-310.pyc
+ebay_scanner/__pycache__/webscraper.cpython-310.pyc
+terraform.*
+venv/*
+.vscode/*
+.terraform/*
+.terraform.lock.hcl
+terraform.tfstate.backup
