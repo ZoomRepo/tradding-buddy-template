@@ -18,6 +18,7 @@ class Webscrapper:
         for item in list:
             clean_list.append(item.replace('\n',''))
         return clean_list
+        
     # TODO: Implement Logging and Error handling so that if main block fails it Logs and Carries on running
     # TODO: Apply abstraction to the Scrape method 
     def scrape(self):
@@ -40,7 +41,7 @@ class Webscrapper:
             # Check the seller has advertised item is in hand
             if condition[0] in lower_info_text  or condition[1] in lower_info_text or condition[2] in lower_info_text:
                 price = 0
-                detail_items = item_info.find_all("div", {"class", "s-item__detail s-item__detail--primary"})
+                detail_items = item_info.find_all("div", {"class", "s-item__detailundefined s-item__detail--primary"})
                 price = detail_items[0].find('span', {'class': 's-item__price'})
                 if price != 0:
                     real_price = price.text.replace("£", "").replace("�", "").replace("$", "").replace("€", "").replace(',', '')
